@@ -12,7 +12,7 @@ app.on("ready", function() {
 
   mainWindow.loadURL(
     url.format({
-      pathname: path.join(__dirname, "index.html"),
+      pathname: path.join(__dirname, "hw.html"),
       protocol: "file:",
       slashes: true
     })

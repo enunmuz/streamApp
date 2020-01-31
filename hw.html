@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>electroStream.</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/hw_style.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700&display=swap"
       rel="stylesheet"
     />
   </head>
+
   <body>
     <div class="wave-container">
       <svg
@@ -43,19 +41,31 @@
     <div class="main">
       <div class="center_text">
         <p>
-          This is a Streaming App on
-          <span class="strong_text">electron</span> based on
-          <span class="strong_text">WebRTC</span>
+          Select
+          <span class="strong_text">Hardware</span>
         </p>
       </div>
-      <div class="buttons">
-        <a href="hw.html"><button class="button g_going">
-          get <span class=" button_text">going</span>
-        </button></a>
-        <button class="button quit">
-          quit.
-        </button>
+
+      <div id="container">
+        <br />
+        <br />
+        <div class="select">
+          <label for="audioSource">Microphone</label
+          ><select id="audioSource"></select>
+        </div>
+
+        <div class="select">
+          <label for="videoSource">Camera</label
+          ><select id="videoSource"></select>
+        </div>
+        <a href="select.html">
+          <button class="button select-btn">
+            select
+          </button>
+        </a>
+        <video autoplay playsinline></video>
       </div>
     </div>
+    <script async src="js/main.js"></script>
   </body>
 </html>
