@@ -21,13 +21,20 @@
         document.body.removeChild(inputDump);
       }
     </script>
-    <button class="btn1" onclick="copyFunction();">Copy</button>
+
+    <div class="url">
+      <p>
+        Click to copy the URL & paste it in the browser
+      </p>
+      <button class="btn1" onclick="copyFunction();">Share URL</button>
+    </div>
+
     <video id="localVideo" autoplay muted></video>
     <video id="remoteVideo" autoplay></video>
     <script>
       $(document).ready(function() {
         $(".btn1").click(function() {
-          $(".btn1").fadeOut();
+          $(".url").fadeOut();
         });
       });
     </script>
