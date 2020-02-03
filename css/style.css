@@ -100,11 +100,13 @@ label {
   margin: 20px 30px;
   padding: 10px;
 }
-video{
-    position: absolute;
-    height: 95px;
-    width: 95px;
-    object-fit: cover;
-    border: 1px solid rgb(80, 80, 80);
-    border-radius: 50px;
+video {
+  position: absolute;
+  height: 95px;
+  width: 95px;
+}
+.hw_thumb {
+  object-fit: cover;
+  border: 1px solid rgb(80, 80, 80);
+  border-radius: 50px;
 }
