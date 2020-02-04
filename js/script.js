@@ -2,7 +2,7 @@ if (!location.hash) {
   location.hash = Math.floor(Math.random() * 0xffffff).toString(16);
 }
 const roomHash = location.hash.substring(1);
-const drone = new ScaleDrone("uNj04mqxLk247RTW");
+const drone = new ScaleDrone('uNj04mqxLk247RTW');
 const roomName = "observable-" + roomHash;
 const configuration = {
   iceServers: [
