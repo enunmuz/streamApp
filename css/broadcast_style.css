@@ -16,12 +16,11 @@ video {
   vertical-align: top;
   width: 40%;
   height: 50%;
-  border-radius: 10px;
 }
 
 .create_broadcast {
   width: 800px;
-  margin-bottom: 50px;
+  margin: 50px 0px;
 }
 .setup {
   background-color: #28445e;
@@ -46,7 +45,7 @@ video {
   text-decoration: none;
   font-size: 1em;
   cursor: pointer;
-  margin: 0 20px;
+  margin: auto;
   width: 120px;
 }
 
@@ -54,7 +53,7 @@ video {
   border: none;
   border-radius: 3px;
   background-color: #d3d3d3;
-  width: 220px;
+  width: 133px;
   height: 38px;
   font-size: 1em;
   font-weight: 500;
@@ -100,4 +99,7 @@ input {
   width: 0px;
   height: 0px;
   opacity: 0;
+}
+.center-text{
+   padding-bottom: 20px;
 }

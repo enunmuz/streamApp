@@ -1,3 +1,6 @@
+var input = document.getElementById('broadcast-name').select();
+
+
 if (!location.hash.replace("#", "").length) {
   location.href =
     location.href.split("#")[0] +
@@ -128,7 +131,7 @@ function captureUserMedia(callback) {
       video: video_constraints
     };
 
-    if (DetectRTC.isScreenCapturingSupported !== true) {
+    if (DetectRTC.isScreenCapturingSupported !== false) {
       alert(
         'DetectRTC library is unable to find screen capturing support. You MUST run chrome with command line flag "chrome --enable-usermedia-screen-capturing"'
       );

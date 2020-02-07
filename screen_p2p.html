@@ -1,0 +1,118 @@
+﻿﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>electroStream. | Select</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/select_style.css" />
+    <link rel="stylesheet" href="css/broadcast_style.css" />
+    <link rel="stylesheet" href="css/cam-toggle.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://www.webrtc-experiment.com/DetectRTC.js"></script>
+    <script src="https://www.webrtc-experiment.com/socket.io.js"></script>
+    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+    <script src="https://www.webrtc-experiment.com/IceServersHandler.js"></script>
+    <script src="https://www.webrtc-experiment.com/CodecsHandler.js"></script>
+    <script src="https://www.webrtc-experiment.com/RTCPeerConnection-v1.5.js"></script>
+    <script src="https://www.webrtc-experiment.com/webrtc-broadcasting/broadcast.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <div class="wave-container">
+      <svg
+        id="Layer_1"
+        data-name="Layer 1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1171 770"
+      >
+        <defs>
+          <style>
+            .cls-1 {
+              opacity: 0.03;
+            }
+          </style>
+        </defs>
+        <title>Untitled-1</title>
+        <path
+          class="cls-1"
+          d="M262.5,767.5s-35-287,327-411c202-71,262-176,337-277s244-80,244-80L-.5-2.5v770Z"
+          transform="translate(0.5 2.5)"
+        />
+      </svg>
+    </div>
+    <div class="title_bd">
+      <div class="title">
+        <p>electro<span class="strong_title">Stream.</span></p>
+      </div>
+    </div>
+
+    <div class="join-bg">
+      <div class="join-broad">
+        <table style="width: 100%;" id="rooms-list"></table>
+      </div>
+    </div>
+
+    <!-- main start here -->
+    <section class="experiment main">
+      <div class="center_text">
+        <p>
+          Share Your
+          <span class="strong_text">Screen & Cam</span>
+        </p>
+      </div>
+      <section class="create_broadcast">
+        <select id="broadcasting-option">
+          <option>Screen</option>
+        </select>
+
+        <input
+          class="broad-input"
+          type="text"
+          placeholder="Stream name"
+          id="broadcast-name"
+        />
+        <button
+          id="setup-new-broadcast"
+          class="setup"
+        >
+          Setup New Broadcast
+        </button>
+        <button
+          id="showVideo"
+          class="showVideo"
+        >
+        Open & Toggle camera
+        </button>
+        <button
+          id="setup-new-broadcast"
+          onclick="copyFunction();"
+          class="share-link"
+        >
+          Share link
+        </button>
+      </section>
+      <video id="video" autoplay playsinline controls></video>
+
+      <div id="videos-container"></div>
+    </section>
+    <script>
+      $(document).ready(function() {
+        $(".join").click(function() {
+          $(".join-bg").fadeOut();
+        });
+      });
+    </script>
+    <script src="js/broadcast.js"></script>
+    <script src="js/stream-cam-toggle.js"></script>
+    <script src="js/toggle-cam.js"></script>
+    <script src="js/share-link.js"></script>
+  </body>
+</html>
+<!-- <select id="broadcasting-option">
+            <option>Audio + Video</option>
+            <option>Only Audio</option>
+            <option>Screen</option>
+          </select> -->

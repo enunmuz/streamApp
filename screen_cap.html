@@ -4,6 +4,7 @@
     <title>electroStream. | Select</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/select_style.css" />
+    <link rel="stylesheet" href="css/broadcast_style.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700&display=swap"
       rel="stylesheet"
@@ -16,21 +17,9 @@
     <script src="https://www.webrtc-experiment.com/RTCPeerConnection-v1.5.js"></script>
     <script src="https://www.webrtc-experiment.com/webrtc-broadcasting/broadcast.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="css/broadcast_style.css" />
   </head>
 
   <body>
-    <script type="text/javascript">
-      function copyFunction() {
-        var inputDump = document.createElement("input"),
-          hrefText = window.location.href;
-        document.body.appendChild(inputDump);
-        inputDump.value = hrefText;
-        inputDump.select();
-        document.execCommand("copy");
-        document.body.removeChild(inputDump);
-      }
-    </script>
     <div class="wave-container">
       <svg
         id="Layer_1"
@@ -58,13 +47,21 @@
         <p>electro<span class="strong_title">Stream.</span></p>
       </div>
     </div>
+
     <div class="join-bg">
       <div class="join-broad">
         <table style="width: 100%;" id="rooms-list"></table>
       </div>
     </div>
+
     <!-- main start here -->
     <section class="experiment main">
+      <div class="center_text">
+        <p>
+          Share Your
+          <span class="strong_text">Screen</span>
+        </p>
+      </div>
       <section class="create_broadcast">
         <select id="broadcasting-option">
           <option>Screen</option>
@@ -73,7 +70,7 @@
         <input
           class="broad-input"
           type="text"
-          placeholder="Type your stream name"
+          placeholder="Stream name"
           id="broadcast-name"
         />
         <button
@@ -102,6 +99,7 @@
       });
     </script>
     <script src="js/broadcast.js"></script>
+    <script src="js/share-link.js"></script>
   </body>
 </html>
 <!-- <select id="broadcasting-option">

@@ -1,0 +1,17 @@
+#video {
+  width: 0px;
+  opacity: 0;
+}
+.showVideo {
+    background-color: #83476f;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.96em;
+    cursor: pointer;
+    width: 200px;
+    margin-right: 5px;
+  }

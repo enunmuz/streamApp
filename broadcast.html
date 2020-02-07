@@ -20,17 +20,6 @@
   </head>
 
   <body>
-    <script type="text/javascript">
-      function copyFunction() {
-        var inputDump = document.createElement("input"),
-          hrefText = window.location.href;
-        document.body.appendChild(inputDump);
-        inputDump.value = hrefText;
-        inputDump.select();
-        document.execCommand("copy");
-        document.body.removeChild(inputDump);
-      }
-    </script>
     <div class="wave-container">
       <svg
         id="Layer_1"
@@ -65,11 +54,17 @@
     </div>
     <!-- main start here -->
     <section class="experiment main">
+      <div class="center_text">
+        <p>
+          Broadcast Your
+          <span class="strong_text">Camera</span>
+        </p>
+      </div>
       <section class="create_broadcast">
         <input
           class="broad-input"
           type="text"
-          placeholder="Type your stream name"
+          placeholder="Stream name"
           id="broadcast-name"
         />
         <button
@@ -92,6 +87,7 @@
     </section>
 
     <script src="js/broadcast.js"></script>
+    <script src="js/share-link.js"></script>
     <script>
       $(document).ready(function() {
         $(".join").click(function() {

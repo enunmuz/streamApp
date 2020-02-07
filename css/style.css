@@ -104,10 +104,10 @@ video {
   position: absolute;
   height: 95px;
   width: 95px;
+  outline: none;
 }
 .hw_thumb {
   object-fit: cover;
   border: 1px solid rgb(80, 80, 80);
   border-radius: 50px;
 }
-
