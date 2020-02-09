@@ -1,5 +1,4 @@
-var input = document.getElementById('broadcast-name').select();
-
+var input = document.getElementById("broadcast-name").select();
 
 if (!location.hash.replace("#", "").length) {
   location.href =

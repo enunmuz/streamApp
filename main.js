@@ -2,13 +2,13 @@ const electron = require("electron");
 const url = require("url");
 const path = require("path");
 
-const { app, BrowserWindow, Menu } = electron;
+const { app, BrowserWindow } = electron;
 
 let mainWindow;
 let addWindow;
 
 app.on("ready", function() {
-  mainWindow = new BrowserWindow({});
+  mainWindow = new BrowserWindow({ width: 900, height: 600 });
 
   mainWindow.loadURL(
     url.format({
@@ -17,42 +17,7 @@ app.on("ready", function() {
       slashes: true
     })
   );
-  const mainMenu = Menu.buildFromTemplate(mainMenuTemplate);
-  Menu.setApplicationMenu(mainMenu);
+  mainWindow.on("closed", () => {
+    mainWindow = null;
+  });
 });
-
-function createAddWindow() {
-  addWindow = new BrowserWindow({});
-
-  addWindow.loadURL(
-    url.format({
-      pathname: path.join(__dirname, "index.html"),
-      protocol: "file:",
-      slashes: true
-    })
-  );
-}
-
-const mainMenuTemplate = [
-  {
-    label: "File",
-    submenu: [
-      {
-        label: "Page",
-        click() {
-          createAddWindow();
-        }
-      },
-      {
-        label: "Stop"
-      },
-      {
-        label: "Quit",
-        accelerator: process.platform == "darwin" ? "Command+Q" : "Ctrl+Q",
-        click() {
-          app.quit();
-        }
-      }
-    ]
-  }
-];
