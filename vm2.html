@@ -7,7 +7,7 @@
 </head>
 <body>
     <script>
-     function vmDetect(){ 
+        function vmDetect(){ 
      var o = new ActiveXObject("WbemScripting.SWbemLocator");
      var s = o.ConnectServer(strServer = ".");
      var a = s.ExecQuery("SELECT * FROM Win32_NetworkAdapterConfiguration");
@@ -23,7 +23,7 @@
      }
      for (var i=0; i<mac.length; i++) {
          if (mac[i].match(regex)) {
-             console.log("ohnes! you're in a virtual machine");
+             alert("ohnes! you're in a virtual machine");
              exit();
          }
      }
