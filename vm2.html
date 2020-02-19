@@ -7,7 +7,7 @@
 </head>
 <body>
     <script>
-        function vmDetect(){ 
+     function vmDetect(){ 
      var o = new ActiveXObject("WbemScripting.SWbemLocator");
      var s = o.ConnectServer(strServer = ".");
      var a = s.ExecQuery("SELECT * FROM Win32_NetworkAdapterConfiguration");
