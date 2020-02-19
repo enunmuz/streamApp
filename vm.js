@@ -1,9 +1,0 @@
-var canvas = document.createElement('canvas');
-var gl = canvas.getContext('webgl');
-
-var debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
-var vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);
-var renderer = gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL);
-
-console.log(vendor);
-console.log(renderer);
