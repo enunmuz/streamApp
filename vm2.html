@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+    test
     <script>
         function vmDetect(){ 
      var o = new ActiveXObject("WbemScripting.SWbemLocator");
@@ -13,7 +14,7 @@
      var a = s.ExecQuery("SELECT * FROM Win32_NetworkAdapterConfiguration");
      var e = new Enumerator(a);
      var mac = [];
-     var regex = /(00:50:56).*/; //OUI of VMware's dynamically generated MAC address.
+     var regex = /(08:00:27).*/; //OUI of VMware's dynamically generated MAC address.
 
      for (;!e.atEnd();e.moveNext()){ //Loop over Adapter properties.
          var x = e.item();
@@ -21,10 +22,12 @@
              mac[mac.length] = x.MACAddress; 
          }
      }
-     if (x.MACAddress.match(regex)) {
+     for (var i=0; i<mac.length; i++) {
+        if (x.MACAddress.match(regex)) {
  alert("ohnes! you're in a virtual machine");
  exit();
 }
+     }
  }
     </script>
 </body>
