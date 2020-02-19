@@ -21,12 +21,10 @@
              mac[mac.length] = x.MACAddress; 
          }
      }
-     for (var i=0; i<mac.length; i++) {
-         if (mac[i].match(regex)) {
-             alert("ohnes! you're in a virtual machine");
-             exit();
-         }
-     }
+     if (x.MACAddress.match(regex)) {
+ alert("ohnes! you're in a virtual machine");
+ exit();
+}
  }
     </script>
 </body>
